@@ -1,0 +1,68 @@
+create table hospital(
+	hospital_id int primary key,
+	hospital_name varchar(100),
+	address varchar(100),
+	phone_number varchar(20)
+)
+
+select * from hospital
+
+create table patient(
+	patient_id int primary key,
+	patient_name varchar(100),
+	age int,
+	gender varchar(10),
+	hospital_id int,
+	FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
+)
+
+select * from patient
+
+insert into hospital(hospital_id,hospital_name,address,phone_number) values(1,'hospitalA','ABC','123-456'),(2,'hospitalB','DEF','789-123'),(3,'hospitalC','GHI','456-789'),(4,'hospitalD','JKL','123-456'),(5,'hospitalE','MNO','789-123'),(6,'hospitalF','PQR','123-456'),(7,'hospitalG','STU','789-123'),
+(8,'hospitalH','VWX','456-789'),(9,'hospitalI','YZA','123-456'),(10,'hospitalJ','BCD','789-123'),(11,'hospitalK','EFG','456-789'),
+(12,'hospitalL','HIJ','123-456'),(13,'hospitalM','KLM','789-123'),(14,'hospitalN','NOP','456-789'),(15,'hospitalO','QRS','123-456'),
+(16,'hospitalP','TUV','789-123'),(17,'hospitalQ','WXY','456-789'),(18,'hospitalR','ZAB','123-456'),(19,'hospitalS','CDE','789-123'),(20,'hospitalT','FGH','456-789')
+
+select * from hospital
+
+insert into patient(patient_id,patient_name,age,gender,hospital_id) values(1,'pooja',20,'female',1),(2,'neha',21,'female',2),(3,'ram',25,'male',3),(4,'jay',26,'male',4),(5,'sky',28,'male',5),
+(6,'sneha',21,'female',6),(7,'meena',22,'female',7),(8,'komal',23,'female',8),(9,'juhi',24,'female',9),(10,'rahul',25,'male',10),
+(11,'lata',26,'female',1),(12,'neeta',27,'female',2),(13,'gaurav',28,'male',3),(14,'raj',29,'male',4),(15,'reeta',30,'female',5),
+(16,'krishna',31,'male',6),(17,'lalita',32,'female',7),(18,'rajesh',33,'male',8),(19,'vipul',34,'male',9),(20,'sunita',35,'female',10),
+(21,'jara',36,'female',1),(22,'sarita',37,'female',2),(23,'raju',38,'male',3),(24,'vijay',39,'male',4),(25,'sunil',40,'male',5)
+
+	
+insert into patient values(26,'hana',41,'female',6),(27,'dhanu',42,'female',7),(28,'ruchi',43,'female',8),(29,'teju',44,'female',9),(30,'ashu',45,'male',10),
+(31,'jayvanta',46,'female',1),(32,'monika',47,'female',2),(33,'roshan',48,'male',3),(34,'ravi',49,'male',4),(35,'reva',50,'female',5),
+(36,'keval',21,'male',6),(37,'lekha',22,'female',7),(38,'rocky',23,'male',8),(39,'vinayak',24,'male',9),(40,'tara',25,'female',10),
+(41,'rekha',26,'female',1),(42,'mohini',27,'female',2),(43,'prajakta',28,'female',3),(44,'shweta',29,'female',4),(45,'rajas',30,'male',5),
+(46,'priyanka',31,'female',6),(47,'aditi',32,'female',7),(48,'omkar',33,'male',8),(49,'tejas',34,'male',9),(50,'ritha',35,'female',10),
+(51,'keshav',36,'male',1),(52,'radha',37,'female',2),(53,'rudra',38,'male',3),(54,'akshay',39,'male',4),(55,'sonu',40,'female',5),
+(56,'kapil',41,'male',6),(57,'ruhani',42,'female',7),(58,'rakesh',43,'male',8),(59,'ashish',44,'male',9),(60,'soha',45,'female',10)
+
+
+insert into patient values(61,'kairav',46,'male',6),(62,'roshni',47,'female',7),(63,'reyansh',48,'male',8),(64,'aaroha',49,'male',9),(65,'siddhi',50,'female',10),
+(66,'kamlesh',21,'male',6),(67,'nidhi',22,'female',7),(68,'tushar',23,'male',8),(69,'kush',24,'male',9),(70,'luv',25,'female',10),
+(71,'pankaj',26,'male',1),(72,'reshma',27,'female',2),(73,'pavan',28,'male',3),(74,'mahanth',29,'male',4),(75,'aleena',30,'female',5),
+(76,'nitin',31,'male',6),(77,'naresh',32,'female',7),(78,'anil',33,'male',8),(79,'arun',34,'male',9),(80,'shalini',35,'female',10),
+(81,'kuldeep',36,'male',1),(82,'monu',37,'female',2),(83,'rony',38,'male',3),(84,'adwait',39,'male',4),(85,'lavanya',40,'female',5),
+(86,'koshik',41,'male',6),(87,'shirisha',42,'female',7),(88,'lavink',43,'male',8),(89,'agastya',44,'male',9),(90,'shivali',45,'female',10),
+(91,'vidyanand',46,'male',1),(92,'rajasi',47,'female',2),(93,'rushi',48,'male',3),(94,'amir',49,'male',4),(95,'sejal',50,'female',5),
+(96,'mahendra',21,'male',6),(97,'mudra',22,'female',7),(98,'lakshmana',23,'male',8),(99,'tom',24,'male',9),(100,'aaradhya',25,'female',10)
+	
+select * from patient
+
+insert into patient values(101,'oliver',26,'male',1),(102,'aiden',27,'female',2),(103,'advik',28,'male',3),(104,'ivaan',29,'male',4),(105,'aarvi',30,'female',5),
+(106,'adam',31,'male',6),(107,'lillian',32,'female',7),(108,'leo',33,'male',8),(109,'aacharya',34,'male',9),(110,'adya',35,'female',10),
+(111,'john',36,'male',1),(112,'amaya',37,'female',2),(113,'ronan',38,'male',3),(114,'wren',39,'male',4),(115,'sonalika',40,'female',5),
+(116,'alex',41,'male',6),(117,'anisha',42,'female',7),(118,'reyan',43,'male',8),(119,'reyansh',44,'male',9),(120,'anvi',45,'female',10),
+(121,'david',46,'male',1),(122,'anvika',47,'female',2),(123,'dan',48,'male',3)
+
+select * from patient
+
+copy patient from 'D:\DA 9\SQL\patient_data_FG_key_task2_25-july.csv' DELIMITER ',' csv header
+
+select * from patient
+
+
+
